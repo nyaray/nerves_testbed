@@ -7,9 +7,14 @@ defmodule NervesTestbed.Application do
 
   use Application
 
+  alias Nerves.Leds
+
   def start(_type, _args) do
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
+
+    Leds.set red: :slowblink, green: :heartbeat
+
     opts = [strategy: :one_for_one, name: NervesTestbed.Supervisor]
     Supervisor.start_link(children(@target), opts)
   end

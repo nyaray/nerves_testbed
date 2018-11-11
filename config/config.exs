@@ -29,3 +29,6 @@ config :logger, backends: [RingLogger]
 # Uncomment to use target specific configurations
 
 # import_config "#{Mix.Project.config[:target]}.exs"
+
+# nerves_leds
+config :nerves_leds, names: [red: "led0", green: "led1"]
