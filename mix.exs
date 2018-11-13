@@ -50,7 +50,7 @@ defmodule NervesTestbed.MixProject do
 
   defp deps(target) do
     [
-      {:nerves_runtime, "~> 0.6"}
+      {:nerves_runtime, "~> 0.6"},
       {:nerves_leds, "~> 0.8.0"},
     ] ++ system(target)
   end
